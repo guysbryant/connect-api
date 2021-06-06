@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+circle1 = Circle.find_or_create_by(name: 'test1')
+circle2 = Circle.find_or_create_by(name: 'test2')
