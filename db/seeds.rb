@@ -8,3 +8,7 @@
 
 circle1 = Circle.find_or_create_by(name: 'test1')
 circle2 = Circle.find_or_create_by(name: 'test2')
+
+user1 = User.create(password: "password", email: "guy.s.bryant@gmail.com")
+
+post1 = Post.create(text: "test post", user: user1, circle: circle1)
