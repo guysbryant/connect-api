@@ -10,7 +10,11 @@ class CirclesController < ApplicationController
 
   # GET /circles/1
   def show
-    render json: @circle
+    hash = CircleSerializer.new(@circle, include: [:posts]).serializable_hash
+    render json: {
+      circle: hash[:data][:attributes],
+      posts: hash[:included].map{ |post| post[:attributes] }
+    }
   end
 
   # POST /circles
