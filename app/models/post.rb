@@ -1,4 +1,4 @@
 class Post < ApplicationRecord
   belongs_to :user
-  belogns_to :circle
+  belongs_to :circle
 end
