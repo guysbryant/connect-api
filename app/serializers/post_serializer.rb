@@ -1,4 +1,4 @@
 class PostSerializer
   include JSONAPI::Serializer
-  attributes :id, :text
+  attributes :id, :text, :circle_id
 end
